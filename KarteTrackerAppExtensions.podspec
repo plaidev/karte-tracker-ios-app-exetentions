@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   }
   s.ios.deployment_target = '10.0'
   s.ios.weak_frameworks   = 'UserNotifications'
+	s.ios.frameworks        = 'MobileCoreServices'
 	s.vendored_frameworks   = 'KarteTrackerAppExtensions.framework'
 	s.compiler_flags        = '-ObjC'
 	s.requires_arc          = true
