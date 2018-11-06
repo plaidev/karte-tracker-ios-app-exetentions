@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                    = 'KarteTrackerAppExtensions'
-  s.version                 = '1.0.1'
+  s.version                 = '1.0.2'
   s.summary                 = 'KARTE SDK for iOS App Extensions'
   s.homepage                = 'https://karte.io/'
   s.author                  = { 'Plaid' => 'dev.share@plaid.co.jp' }
@@ -31,7 +31,8 @@ Pod::Spec.new do |s|
   else
     s.source                = { :git => 'https://github.com/plaidev/tracker-ios.git', :tag => 'v0.0.0' }
     s.source_files          = 'KarteTrackerAppExtensions/Classes/**/*'
-    s.public_header_files   = 'KarteTrackerAppExtensions/Classes/Public/*.h'
+    s.public_header_files   = 'KarteTrackerAppExtensions/Classes/*.h'
     s.private_header_files  = 'KarteTrackerAppExtensions/Classes/Private/*.h'
+    s.pod_target_xcconfig   = { 'OTHER_CFLAGS' => '-fembed-bitcode' }
   end
 end
